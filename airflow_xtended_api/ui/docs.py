@@ -317,6 +317,27 @@ api_metadata = [
             },
         ],
     },
+{
+        "name": "download_file",
+        "description": "Download a new file from the specified directory",
+        "http_method": "POST",
+        "form_enctype": "multipart/form-data",
+        "arguments": [],
+        "post_arguments": [
+            {
+                "name": "file",
+                "description": "Filename to be downloaded",
+                "form_input_type": "text",
+                "required": True,
+            },
+            {
+                "name": "path",
+                "description": "Location where the file is to be uploaded (Default is the DAGs directory)",
+                "form_input_type": "text",
+                "required": False,
+            },
+        ],
+    },
     {
         "name": "restart_failed_task",
         "description": "Restart failed tasks with downstream",
